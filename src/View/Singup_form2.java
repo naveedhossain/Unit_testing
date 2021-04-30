@@ -15,7 +15,7 @@ public class Singup_form2 extends JFrame implements ActionListener{
     JTextField t1,t2,t3;
     JComboBox c1,c2,c3,c4,c5;
     String formno;
-    Singup_form2(String formno){
+   public Singup_form2(String formno){
         
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("banking/management/icons/logo.jpg"));
         Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);

@@ -20,7 +20,7 @@ public class Signup_form extends JFrame implements ActionListener{
     long first4 = (ran.nextLong() % 9000L) + 1000L;
     String first = "" + Math.abs(first4);
     
-    Signup_form(){
+    public Signup_form(){
         
         setTitle("NEW APPLICANT FORM");
         

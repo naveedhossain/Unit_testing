@@ -15,7 +15,7 @@ public class Signup_form3 extends JFrame implements ActionListener{
     JButton b1,b2;
     JCheckBox c1,c2,c3,c4,c5,c6,c7;
     String formno;
-    Signup_form3(String formno){
+   public  Signup_form3(String formno){
         this.formno = formno;
         setTitle("NEW APPLICANT FORM - PAGE 3");
     

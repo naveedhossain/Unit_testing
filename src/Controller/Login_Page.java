@@ -1,8 +1,9 @@
 
-package View;
+package Controller;
 
 import Model.Connection;
 import Model.Transaction_Count;
+import View.Signup_form;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
