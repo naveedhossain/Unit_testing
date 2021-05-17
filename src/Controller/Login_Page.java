@@ -88,8 +88,9 @@ public class Login_Page extends JFrame implements ActionListener{
         setVisible(true);
         
     }
+    
     public void actionPerformed(ActionEvent ae){
-        try{ 
+        try{
             if(ae.getSource()==b1){
                 Connection c1 = new Connection();
                 String cardno  = tf1.getText();
@@ -99,7 +100,7 @@ public class Login_Page extends JFrame implements ActionListener{
                 ResultSet rs = c1.s.executeQuery(q);
                 if(rs.next()){
                     setVisible(false);
-                   new Transaction_Count(pin).setVisible(true);
+                   new Transaction_Count(pin).setVisible(true);  
                 }else{
                     JOptionPane.showMessageDialog(null, "Incorrect Card Number or PIN");
                 }
@@ -114,4 +115,19 @@ public class Login_Page extends JFrame implements ActionListener{
             e.printStackTrace();
         }
     }
+        public boolean LoginSuccess(String s, String p) throws SQLException{
+                Connection c1 = new Connection();
+                String cardno  = s;
+                String pin  = p;
+                String q  = "select * from login where cardno = '"+cardno+"' and pin = '"+pin+"'";
+                ResultSet rs = c1.s.executeQuery(q);
+                if(rs.next()){
+                    setVisible(false);
+                   new Transaction_Count(pin).setVisible(true);
+                   return true;
+                }else{
+                    JOptionPane.showMessageDialog(null, "Incorrect Card Number or PIN");
+                    return false;
+                }
+    } 
 }

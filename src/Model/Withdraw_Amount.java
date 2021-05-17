@@ -16,6 +16,7 @@ public class Withdraw_Amount extends JFrame implements ActionListener{
     JButton b1,b2,b3;
     JLabel l1,l2,l3,l4;
     String pin;
+    int balance = 10000;
     Withdraw_Amount(String pin){
         this.pin = pin;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("banking/management/icons/bc.jpg"));
@@ -106,10 +107,20 @@ public class Withdraw_Amount extends JFrame implements ActionListener{
         }
             
     }
-
-    
-    
-    public static void main(String[] args){
-       new Withdraw_Amount("").setVisible(true);
+    public int Withraw(int p , String s) throws SQLException{
+        Connection c1 = new Connection();
+                    
+                    ResultSet rs = c1.s.executeQuery("select * from bank where pin = '"+pin+"'");
+                    rs.next();
+                    System.out.println(balance);
+                       if(rs.getString("mode").equals(s)){
+                           balance += p;
+                       }else{
+                           balance -= p;
+                       }
+                    if(balance < p){
+                        JOptionPane.showMessageDialog(null, "Insuffient Balance");
+                    }
+                    return balance;
     }
 }

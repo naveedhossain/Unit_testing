@@ -118,4 +118,21 @@ public class Pin_Change extends JFrame implements ActionListener{
             e.printStackTrace();
         }
     }
+    
+    public  String  Pin(String s) throws SQLException{
+                String rpin= s;
+                Connection c1 = new Connection();
+                String q1 = "update bank set pin = '"+rpin+"' where pin = '"+pin+"' ";
+                String q2 = "update login set pin = '"+rpin+"' where pin = '"+pin+"' ";
+                String q3 = "update signup3 set pin = '"+rpin+"' where pin = '"+pin+"' ";
+
+                c1.s.executeUpdate(q1);
+                c1.s.executeUpdate(q2);
+                c1.s.executeUpdate(q3);
+                return rpin;
+
+                //JOptionPane.showMessageDialog(null, "PIN changed successfully");
+               // setVisible(false);
+               // new Transaction_Count(rpin).setVisible(true);
+    }
 }

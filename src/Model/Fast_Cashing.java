@@ -16,6 +16,7 @@ public class Fast_Cashing extends JFrame implements ActionListener {
     JButton b1, b2, b3, b4, b5, b6, b7, b8;
     JTextField t1;
     String pin;
+    int balance=10000;
 
    public Fast_Cashing(String pin) {
         this.pin = pin;
@@ -111,10 +112,10 @@ public class Fast_Cashing extends JFrame implements ActionListener {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
-
-    public static void main(String[] args) {
-        new Fast_Cashing("").setVisible(true);
+    public int Fast(int n){
+        balance -= n;
+        return balance;
     }
+    
 }

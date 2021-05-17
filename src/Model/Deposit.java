@@ -8,6 +8,7 @@ package Model;
 import Model.Connection;
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.SQLException;
 import javax.swing.*;
 import java.util.*;
 
@@ -81,5 +82,13 @@ public class Deposit extends JFrame implements ActionListener{
             e.printStackTrace();
         }
             
+    }
+    public String Deposit(String s, String q) throws SQLException{
+        Connection c1 = new Connection ();
+                    String amount=s;
+                    Date date = new Date();
+                    pin = q; 
+                    c1.s.executeUpdate("insert into bank values('"+pin+"', '"+date+"', 'Deposit', '"+amount+"')");
+                    return amount;
     }
 }

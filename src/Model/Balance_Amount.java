@@ -8,16 +8,17 @@ package Model;
 import java.awt.*;
 import java.awt.event.*;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.*;
 import java.util.*;
 
-class Balance_Amount extends JFrame implements ActionListener {
+public class Balance_Amount extends JFrame implements ActionListener {
 
     JTextField t1, t2;
     JButton b1, b2, b3;
     JLabel l1, l2, l3;
     String pin;
-
+    int balance ;
     Balance_Amount(String pin) {
         this.pin = pin;
 
@@ -41,7 +42,7 @@ class Balance_Amount extends JFrame implements ActionListener {
 
         b1.setBounds(390, 633, 150, 35);
         l3.add(b1);
-        int balance = 0;
+        balance = 0;
         try{
             Connection c1 = new Connection();
             ResultSet rs = c1.s.executeQuery("select * from bank where pin = '"+pin+"'");
@@ -63,6 +64,19 @@ class Balance_Amount extends JFrame implements ActionListener {
         setLocation(500, 0);
         setVisible(true);
     }
+        
+    public int Balance(int  amount ,String s ) throws SQLException{
+        Connection c1 = new Connection();
+            ResultSet rs = c1.s.executeQuery("select * from bank where pin = '"+pin+"'");
+            rs.next();
+            System.out.println(balance);
+                if (rs.getString("mode").equals(s)) {
+                    balance += amount;
+                } else {
+                    balance -= amount;
+                }
+                return balance;
+            }
 
     public void actionPerformed(ActionEvent ae) {
         setVisible(false);
