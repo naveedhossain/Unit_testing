@@ -8,7 +8,7 @@ public class Connection{
     public Connection(){  
         try{  
             Class.forName("com.mysql.jdbc.Driver");  
-            c =DriverManager.getConnection("jdbc:mysql:///bank","root","");    
+            c =DriverManager.getConnection("jdbc:mysql:///naveed","root","");    
             s =c.createStatement(); 
      
         }catch(Exception e){ 

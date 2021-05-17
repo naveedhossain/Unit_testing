@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Model;
 
 import Model.Withdraw_Amount;
@@ -13,7 +9,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author sheik
+ * @author Naveed
  */
 public class Withdraw_AmountTest {
     
@@ -22,7 +18,7 @@ public class Withdraw_AmountTest {
     Withdraw_Amount w;
     @Before
     public void setUp() {
-        w = new Withdraw_Amount("133");
+        w = new Withdraw_Amount("7243");
     }
     @Test
     public void testWithraw() throws SQLException {

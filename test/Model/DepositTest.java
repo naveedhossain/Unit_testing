@@ -21,22 +21,14 @@ public class DepositTest {
     Deposit s;
     @Before
     public void setUp() {
-       s = new Deposit("133");
+       s = new Deposit("7243");
     }
-
-    /**
-     * Test of actionPerformed method, of class Deposit.
-     */
-    @Test
-    public void testActionPerformed() {
-    }
-
     /**
      * Test of Deposit method, of class Deposit.
      */
     @Test
     public void testDeposit() throws Exception {
-        assertEquals("1000" , s.Deposit("1000","133"));
+        assertEquals("1000" , s.Deposit("1000","7243"));
     }
     
 }

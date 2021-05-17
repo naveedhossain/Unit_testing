@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author sheik
+ * @author Naveed
  */
 public class Balance_AmountTest {
     Balance_Amount b;
@@ -22,7 +22,7 @@ public class Balance_AmountTest {
     
     @Before
     public void setUp() {
-        b = new Balance_Amount("133");
+        b = new Balance_Amount("7243");
     }
 
     /**
@@ -31,6 +31,6 @@ public class Balance_AmountTest {
      */
     @Test
     public void testBalance() throws SQLException {
-        assertEquals(1207111,b.Balance(1,"Deposit"));
+        assertEquals(104701,b.Balance(1,"Deposit"));
     }
 }

@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author sheik
+ * @author Naveed
  */
 public class Fast_CashingTest {
     Fast_Cashing f;
@@ -21,7 +21,7 @@ public class Fast_CashingTest {
     
     @Before
     public void setUp() {
-        f = new Fast_Cashing("133");
+        f = new Fast_Cashing("7243");
     }
 
     /**

@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author sheik
+ * @author Naveed
  */
 public class Login_PageTest {
     Login_Page p;
@@ -31,6 +31,6 @@ public class Login_PageTest {
      */
     @Test
     public void testLoginSuccess() throws SQLException {
-        assertEquals(true , p.LoginSuccess("5040936058878246","133"));
+        assertEquals(true , p.LoginSuccess("5040936059841718","7243"));
     }  
 }

@@ -23,7 +23,7 @@ public class Pin_ChangeTest {
     
     @Before
     public void setUp() {
-        p= new Pin_Change("132");
+        p= new Pin_Change("7243");
     }
 
 
@@ -32,7 +32,7 @@ public class Pin_ChangeTest {
      */
     @Test
     public void testPin() throws SQLException {
-        assertEquals("133",p.Pin("133"));
+        assertEquals("7243",p.Pin(""));
     }
     
 }
